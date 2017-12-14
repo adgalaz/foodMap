@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Foodmap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <!-- Splash -->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="splashBox" id="splash" style="display:none;">
+            <h1 class="titulo">Foodmap</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Primera Seccion Header y Mapa -->
+  <section class="foodSelection">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+          <!-- Page header -->
+          <div class="page-header">
+            <h2>Foodmap</h2>
+          </div>
+          <!-- Mapa -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13314.501758674069!2d-70.69899280507896!3d-33.45906376936538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srestaurants!5e0!3m2!1sen!2scl!4v1513102782408" width="400" height="300" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Segunda Seccion Dropdown -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+          <!-- Page header -->
+          <div class="page-header">
+            <h3>Comida cerca de ti</h3>
+          </div>
+          <!-- Dropdown -->
+          <div class="dropdown">
+            <span class="selLabel">¿Qué quieres comer?</span>
+            <input type="hidden" name="cd-dropdown">
+            <ul class="dropdown-list">
+              <li id="mexicana" data-value="1">
+                <span>Mexicana</span>
+              </li>
+              <li id="peruana" data-value="2">
+                <span>Peruana</span>
+              </li>
+              <li id="rapida" data-value="3">
+                <span>Rapida</span>
+              </li>
+              <li id="thai" data-value="4">
+                <span>Asiatica</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tercera Seccion Imagenes -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-4  col-md-4 col-md-offset-4  col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+          <!-- Modal link -->
+          <a data-toggle="modal" href="#myModal1" class="thumbnail mexicana">
+              <img src="assets/images/mex1.jpg" alt="...">
+              <p class="txtRestaurant">El Delirio</p>
+            </a>
+          <a href="#" class="thumbnail mexicana">
+              <img src="assets/images/mex2.jpg" alt="...">
+              <p class="txtRestaurant">El Mariachi</p>
+            </a>
+          <a href="#" class="thumbnail mexicana">
+              <img src="assets/images/mex3.jpg" alt="...">
+              <p class="txtRestaurant">Cinco de Mayo</p>
+            </a>
+          <a href="#" class="thumbnail mexicana">
+              <img src="assets/images/mex4.png" alt="...">
+              <p class="txtRestaurant">La Revolucion</p>
+            </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+          <a data-toggle="modal" href="#myModal2" class="thumbnail peruana">
+              <img src="assets/images/per1.jpg" alt="...">
+              <p class="txtRestaurant">Ají Seco</p>
+            </a>
+          <a href="#" class="thumbnail peruana">
+              <img src="assets/images/per2.jpg" alt="...">
+              <p class="txtRestaurant">Incas</p>
+            </a>
+          <a href="#" class="thumbnail peruana">
+              <img src="assets/images/per3.jpg" alt="...">
+              <p class="txtRestaurant">Cocoa</p>
+            </a>
+          <a href="#" class="thumbnail peruana">
+              <img src="assets/images/per4.jpg" alt="...">
+              <p class="txtRestaurant">Hijos del Sol</p>
+            </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+          <a data-toggle="modal" href="#myModal3" class="thumbnail rapida">
+              <img src="assets/images/rapida1.jpg" alt="...">
+              <p class="txtRestaurant">American Dinner</p>
+            </a>
+          <a href="#" class="thumbnail rapida">
+              <img src="assets/images/rapida2.jpg" alt="...">
+              <p class="txtRestaurant">Mi Sandwich</p>
+            </a>
+          <a href="#" class="thumbnail rapida">
+              <img src="assets/images/rapida3.jpg" alt="...">
+              <p class="txtRestaurant">Rica Pizza</p>
+            </a>
+          <a href="#" class="thumbnail rapida">
+              <img src="assets/images/rapida4.jpg" alt="...">
+              <p class="txtRestaurant">Rock HotDog</p>
+            </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+          <a data-toggle="modal" href="#myModal4" class="thumbnail thai">
+              <img src="assets/images/thai1.jpg" alt="...">
+              <p class="txtRestaurant">Indochine</p>
+            </a>
+          <a href="#" class="thumbnail thai">
+              <img src="assets/images/thai2.jpg" alt="...">
+              <p class="txtRestaurant">Hanoi</p>
+            </a>
+          <a href="#" class="thumbnail thai">
+              <img src="assets/images/thai3.jpg" alt="...">
+              <p class="txtRestaurant">Hu Nan</p>
+            </a>
+          <a href="#" class="thumbnail thai">
+              <img src="assets/images/thai4.jpg" alt="...">
+              <p class="txtRestaurant">Sushi Kokoro</p>
+            </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modales -->
+  <!-- Ejemplo Modal Comida Mexicana -->
+  <div id="myModal1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Restaurant "El Delirio"</h4>
+        </div>
+        <div class="modal-body">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13310.686886254465!2d-70.59940665253873!3d-33.48389663445563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srestaurants!5e0!3m2!1sen!2scl!4v1513209404123" width="400" height="300" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
+          <p>Exequiel Fernandez 3390, Macul, Santiago, Región Metropolitana</p>
+          <p>(2) 2294 1147</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Ejemplo Modal Comida Peruana -->
+  <div id="myModal2" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Restaurant "Ají Seco"</h4>
+        </div>
+        <div class="modal-body">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13310.686886254465!2d-70.59940665253873!3d-33.48389663445563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srestaurants!5e0!3m2!1sen!2scl!4v1513209404123" width="400" height="300" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
+          <p>Vicuña Mackenna 3207, San Joaquín, Macul, Región Metropolitana</p>
+          <p>(2) 2553 1956</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ejemplo Modal Comida Rapida -->
+  <div id="myModal3" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Restaurant "American Dinner"</h4>
+        </div>
+        <div class="modal-body">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13310.686886254465!2d-70.59940665253873!3d-33.48389663445563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srestaurants!5e0!3m2!1sen!2scl!4v1513209404123" width="400" height="300" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
+          <p>Isidora Goyenechea 3141, Las Condes, Región Metropolitana</p>
+          <p>(2) 2519 4900</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ejemplo Modal Comida Asiatica -->
+  <div id="myModal4" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Restaurant "Indochine"</h4>
+        </div>
+        <div class="modal-body">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13310.686886254465!2d-70.59940665253873!3d-33.48389663445563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srestaurants!5e0!3m2!1sen!2scl!4v1513209404123" width="400" height="300" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
+          <p>Gral Adolfo Holley 2368, Providencia, Región Metropolitana</p>
+          <p>(2) 2233 1684</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
